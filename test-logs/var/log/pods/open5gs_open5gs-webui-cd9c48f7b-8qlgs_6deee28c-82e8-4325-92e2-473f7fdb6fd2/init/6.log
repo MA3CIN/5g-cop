@@ -1,0 +1,8 @@
+2024-05-29T10:13:18.402770051Z stdout F add admin user with password 1423 if no users
+2024-05-29T10:13:18.452758952Z stdout F MongoDB shell version v4.4.1
+2024-05-29T10:13:18.505069058Z stdout F connecting to: mongodb://open5gs-mongodb:27017/open5gs?compressors=disabled&gssapiServiceName=mongodb
+2024-05-29T10:13:18.506744609Z stdout F Error: couldn't connect to server open5gs-mongodb:27017, connection attempt failed: SocketException: Error connecting to open5gs-mongodb:27017 (10.96.229.104:27017) :: caused by :: Connection refused :
+2024-05-29T10:13:18.50676819Z stdout F connect@src/mongo/shell/mongo.js:374:17
+2024-05-29T10:13:18.506774643Z stdout F @(connect):2:6
+2024-05-29T10:13:18.508322475Z stdout F exception: connect failed
+2024-05-29T10:13:18.508341142Z stdout F exiting with code 1

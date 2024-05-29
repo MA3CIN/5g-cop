@@ -1,0 +1,8 @@
+2023-12-20T20:22:40.438172222Z stdout F level=info ts=2023-12-20T20:22:40.437941027Z caller=main.go:137 msg="Starting prometheus-config-reloader" version="(version=0.70.0, branch=refs/tags/v0.70.0, revision=c2c673f7123f3745a2a982b4a2bdc43a11f50fad)"
+2023-12-20T20:22:40.438230353Z stdout F level=info ts=2023-12-20T20:22:40.438015647Z caller=main.go:138 build_context="(go=go1.21.4, platform=linux/amd64, user=Action-Run-ID-7048794395, date=20231130-15:42:49, tags=unknown)"
+2023-12-20T20:22:40.438748987Z stdout F level=info ts=2023-12-20T20:22:40.438534714Z caller=reloader.go:246 msg="reloading via HTTP"
+2023-12-20T20:22:40.438771698Z stdout F level=info ts=2023-12-20T20:22:40.438556211Z caller=main.go:193 msg="Starting web server for metrics" listen=:8080
+2023-12-20T20:22:40.439222866Z stdout F level=info ts=2023-12-20T20:22:40.439102535Z caller=tls_config.go:274 msg="Listening on" address=[::]:8080
+2023-12-20T20:22:40.43924523Z stdout F level=info ts=2023-12-20T20:22:40.439136607Z caller=tls_config.go:277 msg="TLS is disabled." http2=false address=[::]:8080
+2023-12-20T20:22:40.445034824Z stdout F level=info ts=2023-12-20T20:22:40.444844279Z caller=reloader.go:424 msg="Reload triggered" cfg_in=/etc/alertmanager/config/alertmanager.yaml.gz cfg_out=/etc/alertmanager/config_out/alertmanager.env.yaml watched_dirs=/etc/alertmanager/config
+2023-12-20T20:22:40.445059519Z stdout F level=info ts=2023-12-20T20:22:40.444948981Z caller=reloader.go:282 msg="started watching config file and directories for changes" cfg=/etc/alertmanager/config/alertmanager.yaml.gz out=/etc/alertmanager/config_out/alertmanager.env.yaml dirs=/etc/alertmanager/config

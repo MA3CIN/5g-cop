@@ -1,0 +1,3 @@
+2023-12-20T20:21:54.578056652Z stdout F level=info ts=2023-12-20T20:21:54.577773194Z caller=main.go:137 msg="Starting prometheus-config-reloader" version="(version=0.70.0, branch=refs/tags/v0.70.0, revision=c2c673f7123f3745a2a982b4a2bdc43a11f50fad)"
+2023-12-20T20:21:54.578121109Z stdout F level=info ts=2023-12-20T20:21:54.577861736Z caller=main.go:138 build_context="(go=go1.21.4, platform=linux/amd64, user=Action-Run-ID-7048794395, date=20231130-15:42:49, tags=unknown)"
+2023-12-20T20:21:54.578657965Z stdout F level=info ts=2023-12-20T20:21:54.578457292Z caller=reloader.go:246 msg="reloading via HTTP"

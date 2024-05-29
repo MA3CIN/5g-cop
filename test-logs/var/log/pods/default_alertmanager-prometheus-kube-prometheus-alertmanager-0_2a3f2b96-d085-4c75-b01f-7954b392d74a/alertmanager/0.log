@@ -1,0 +1,8 @@
+2023-12-20T20:22:40.144763077Z stderr F ts=2023-12-20T20:22:40.144Z caller=main.go:245 level=info msg="Starting Alertmanager" version="(version=0.26.0, branch=HEAD, revision=d7b4f0c7322e7151d6e3b1e31cbc15361e295d8d)"
+2023-12-20T20:22:40.144822074Z stderr F ts=2023-12-20T20:22:40.144Z caller=main.go:246 level=info build_context="(go=go1.20.7, platform=linux/amd64, user=root@df8d7debeef4, date=20230824-11:11:58, tags=netgo)"
+2023-12-20T20:22:40.20504743Z stderr F ts=2023-12-20T20:22:40.204Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-12-20T20:22:40.205520316Z stderr F ts=2023-12-20T20:22:40.205Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-12-20T20:22:40.209053322Z stderr F ts=2023-12-20T20:22:40.208Z caller=tls_config.go:274 level=info msg="Listening on" address=[::]:9093
+2023-12-20T20:22:40.209083606Z stderr F ts=2023-12-20T20:22:40.209Z caller=tls_config.go:313 level=info msg="TLS is disabled." http2=false address=[::]:9093
+2023-12-20T20:22:40.440396101Z stderr F ts=2023-12-20T20:22:40.440Z caller=coordinator.go:113 level=info component=configuration msg="Loading configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml
+2023-12-20T20:22:40.440962411Z stderr F ts=2023-12-20T20:22:40.440Z caller=coordinator.go:126 level=info component=configuration msg="Completed loading of configuration file" file=/etc/alertmanager/config_out/alertmanager.env.yaml

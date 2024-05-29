@@ -1,0 +1,152 @@
+2024-03-15T18:37:18.555268696Z stdout F Controller manager Version: version.Info{GitVersion:"chart-2.6.3", GitCommit:"b159d1c5a361ca350ca7789c9eb7fc917479db39", BuildDate:"2024-01-23T15:04:53Z", GoVersion:"go1.19.7", Compiler:"gc", Platform:"linux/amd64"}
+2024-03-15T18:37:18.557283287Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "*prometheus.Registry"}
+2024-03-15T18:37:18.557308539Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "logr.Logger"}
+2024-03-15T18:37:18.557316398Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/metrics.NewChaosControllerManagerMetricsCollector()", "type": "*metrics.ChaosControllerManagerMetricsCollector"}
+2024-03-15T18:37:18.557343119Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/ctrl.New()", "type": "*handler.Server"}
+2024-03-15T18:37:18.557353511Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewOption()", "type": "*manager.Options"}
+2024-03-15T18:37:18.557360453Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewClient()", "type": "client.Client"}
+2024-03-15T18:37:18.557366766Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewClientSet()", "type": "*kubernetes.Clientset"}
+2024-03-15T18:37:18.557373144Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewManager()", "type": "manager.Manager"}
+2024-03-15T18:37:18.557379428Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewAuthCli()", "type": "*v1.AuthorizationV1Client"}
+2024-03-15T18:37:18.557396665Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewScheme()", "type": "*runtime.Scheme"}
+2024-03-15T18:37:18.557402004Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewConfig()", "type": "*rest.Config"}
+2024-03-15T18:37:18.557408094Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewNoCacheReader()", "type": "client.Reader[name = \"no-cache\"]"}
+2024-03-15T18:37:18.557414181Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewControlPlaneCacheReader()", "type": "client.Reader[name = \"control-plane-cache\"]"}
+2024-03-15T18:37:18.557419576Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/utils/chaosdaemon.New()", "type": "*chaosdaemon.ChaosDaemonClientBuilder"}
+2024-03-15T18:37:18.557425411Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/utils/recorder.NewRecorderBuilder()", "type": "*recorder.RecorderBuilder"}
+2024-03-15T18:37:18.557431653Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/common.AllSteps()", "type": "[]pipeline.PipelineStep"}
+2024-03-15T18:37:18.557452509Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/multicluster/clusterregistry.New()", "type": "*clusterregistry.RemoteClusterRegistry"}
+2024-03-15T18:37:18.557478655Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/schedule/utils.NewActiveLister()", "type": "*utils.ActiveLister"}
+2024-03-15T18:37:18.557484974Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/awschaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557490643Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/awschaos/detachvolume.NewImpl()", "type": "*detachvolume.Impl"}
+2024-03-15T18:37:18.557496685Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/awschaos/ec2restart.NewImpl()", "type": "*ec2restart.Impl"}
+2024-03-15T18:37:18.557502119Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/awschaos/ec2stop.NewImpl()", "type": "*ec2stop.Impl"}
+2024-03-15T18:37:18.557507508Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/azurechaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557512989Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/azurechaos/vmstop.NewImpl()", "type": "*vmstop.Impl"}
+2024-03-15T18:37:18.55751843Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/azurechaos/vmrestart.NewImpl()", "type": "*vmrestart.Impl"}
+2024-03-15T18:37:18.557524487Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/azurechaos/diskdetach.NewImpl()", "type": "*diskdetach.Impl"}
+2024-03-15T18:37:18.557544425Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/dnschaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557550827Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/httpchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557556391Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/httpchaos/podhttpchaosmanager.NewBuilder()", "type": "*podhttpchaosmanager.Builder"}
+2024-03-15T18:37:18.55756178Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/iochaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557567351Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/iochaos/podiochaosmanager.NewBuilder()", "type": "*podiochaosmanager.Builder"}
+2024-03-15T18:37:18.557572895Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/kernelchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557578226Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/networkchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557591954Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/networkchaos/trafficcontrol.NewImpl()", "type": "*trafficcontrol.Impl"}
+2024-03-15T18:37:18.557597506Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/networkchaos/partition.NewImpl()", "type": "*partition.Impl"}
+2024-03-15T18:37:18.557603012Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/networkchaos/podnetworkchaosmanager.NewBuilder()", "type": "*podnetworkchaosmanager.Builder"}
+2024-03-15T18:37:18.557619025Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/podchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557625143Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/podchaos/podkill.NewImpl()", "type": "*podkill.Impl"}
+2024-03-15T18:37:18.557630556Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/podchaos/podfailure.NewImpl()", "type": "*podfailure.Impl"}
+2024-03-15T18:37:18.55763622Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/podchaos/containerkill.NewImpl()", "type": "*containerkill.Impl"}
+2024-03-15T18:37:18.557641671Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/gcpchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557647318Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/gcpchaos/diskloss.NewImpl()", "type": "*diskloss.Impl"}
+2024-03-15T18:37:18.557652932Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/gcpchaos/nodereset.NewImpl()", "type": "*nodereset.Impl"}
+2024-03-15T18:37:18.557667789Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/gcpchaos/nodestop.NewImpl()", "type": "*nodestop.Impl"}
+2024-03-15T18:37:18.557673883Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/stresschaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557679229Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/jvmchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557684896Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/timechaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557691163Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/physicalmachinechaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557702516Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "fx.Annotated{Group: \"impl\", Target: github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/blockchaos.NewImpl()}", "type": "*types.ChaosImplPair[group = \"impl\"]"}
+2024-03-15T18:37:18.557708265Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/controllers/chaosimpl/utils.NewContainerRecordDecoder()", "type": "*utils.ContainerRecordDecoder"}
+2024-03-15T18:37:18.557723633Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector.New()", "type": "*selector.Selector"}
+2024-03-15T18:37:18.557729675Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/pod.New()", "type": "*pod.SelectImpl"}
+2024-03-15T18:37:18.557735481Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/container.New()", "type": "*container.SelectImpl"}
+2024-03-15T18:37:18.557740943Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/aws.New()", "type": "*aws.SelectImpl"}
+2024-03-15T18:37:18.557746875Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/azure.New()", "type": "*azure.SelectImpl"}
+2024-03-15T18:37:18.557752188Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/gcp.New()", "type": "*gcp.SelectImpl"}
+2024-03-15T18:37:18.557766783Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/physicalmachine.New()", "type": "*physicalmachine.SelectImpl"}
+2024-03-15T18:37:18.557773173Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "github.com/chaos-mesh/chaos-mesh/pkg/selector/nodevolumepath.New()", "type": "*nodevolumepath.SelectImpl"}
+2024-03-15T18:37:18.557778616Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557783892Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557789478Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557804889Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557811106Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557816482Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557821763Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557827244Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557841689Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557850749Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557856235Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557861719Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557876248Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557889911Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.Object"}
+2024-03-15T18:37:18.557895528Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.WebhookObject"}
+2024-03-15T18:37:18.557901149Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	supplied	{"type": "types.WebhookObject"}
+2024-03-15T18:37:18.557916815Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "go.uber.org/fx.New.func1()", "type": "fx.Lifecycle"}
+2024-03-15T18:37:18.557924018Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "go.uber.org/fx.(*App).shutdowner-fm()", "type": "fx.Shutdowner"}
+2024-03-15T18:37:18.557934432Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	provided	{"constructor": "go.uber.org/fx.(*App).dotGraph-fm()", "type": "fx.DotGraph"}
+2024-03-15T18:37:18.557942787Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	initialized custom fxevent.Logger	{"function": "main.main.func1()"}
+2024-03-15T18:37:18.557952225Z stderr F 2024-03-15T18:37:18.557Z	INFO	fx	fx-logr@v0.1.0/logr.go:44	invoking	{"function": "github.com/chaos-mesh/chaos-mesh/controllers/common.Bootstrap()"}
+2024-03-15T18:37:18.558074533Z stderr F 2024-03-15T18:37:18.558Z	INFO	setup	provider/controller.go:87	Chaos controller manager is running in cluster scoped mode.
+2024-03-15T18:37:18.559046123Z stderr F 2024-03-15T18:37:18.558Z	ERROR	cluster/cluster.go:161	Failed to get API Group-Resources	{"error": "Get \"https://10.96.0.1:443/api?timeout=32s\": dial tcp 10.96.0.1:443: connect: network is unreachable"}
+2024-03-15T18:37:18.559066947Z stderr F sigs.k8s.io/controller-runtime/pkg/cluster.New
+2024-03-15T18:37:18.559074175Z stderr F 	/tmp/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.2/pkg/cluster/cluster.go:161
+2024-03-15T18:37:18.559079609Z stderr F sigs.k8s.io/controller-runtime/pkg/manager.New
+2024-03-15T18:37:18.559085173Z stderr F 	/tmp/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.14.2/pkg/manager/manager.go:351
+2024-03-15T18:37:18.559090524Z stderr F github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider.NewManager
+2024-03-15T18:37:18.559095945Z stderr F 	/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider/controller.go:111
+2024-03-15T18:37:18.559102558Z stderr F reflect.Value.call
+2024-03-15T18:37:18.559108222Z stderr F 	/usr/local/go/src/reflect/value.go:584
+2024-03-15T18:37:18.559113651Z stderr F reflect.Value.Call
+2024-03-15T18:37:18.559119547Z stderr F 	/usr/local/go/src/reflect/value.go:368
+2024-03-15T18:37:18.559125544Z stderr F go.uber.org/dig.defaultInvoker
+2024-03-15T18:37:18.559131809Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/container.go:238
+2024-03-15T18:37:18.559137415Z stderr F go.uber.org/dig.(*constructorNode).Call
+2024-03-15T18:37:18.559142729Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/constructor.go:165
+2024-03-15T18:37:18.559148245Z stderr F go.uber.org/dig.paramSingle.Build
+2024-03-15T18:37:18.559153597Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/param.go:287
+2024-03-15T18:37:18.559158895Z stderr F go.uber.org/dig.paramObjectField.Build
+2024-03-15T18:37:18.559164333Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/param.go:484
+2024-03-15T18:37:18.559169582Z stderr F go.uber.org/dig.paramObject.Build
+2024-03-15T18:37:18.559175371Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/param.go:412
+2024-03-15T18:37:18.559180888Z stderr F go.uber.org/dig.paramList.BuildList
+2024-03-15T18:37:18.559186627Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/param.go:150
+2024-03-15T18:37:18.559192053Z stderr F go.uber.org/dig.(*Scope).Invoke
+2024-03-15T18:37:18.559197732Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/invoke.go:90
+2024-03-15T18:37:18.559203011Z stderr F go.uber.org/dig.(*Container).Invoke
+2024-03-15T18:37:18.559208474Z stderr F 	/tmp/go/pkg/mod/go.uber.org/dig@v1.16.1/invoke.go:50
+2024-03-15T18:37:18.559213941Z stderr F go.uber.org/fx.runInvoke
+2024-03-15T18:37:18.559231135Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/invoke.go:108
+2024-03-15T18:37:18.55923681Z stderr F go.uber.org/fx.(*module).executeInvoke
+2024-03-15T18:37:18.559242579Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/module.go:246
+2024-03-15T18:37:18.559248243Z stderr F go.uber.org/fx.(*module).executeInvokes
+2024-03-15T18:37:18.559253718Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/module.go:232
+2024-03-15T18:37:18.559259138Z stderr F go.uber.org/fx.New
+2024-03-15T18:37:18.559264461Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:502
+2024-03-15T18:37:18.559270283Z stderr F main.main
+2024-03-15T18:37:18.559276197Z stderr F 	/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/main.go:80
+2024-03-15T18:37:18.559281621Z stderr F runtime.main
+2024-03-15T18:37:18.559287225Z stderr F 	/usr/local/go/src/runtime/proc.go:250
+2024-03-15T18:37:18.559308887Z stderr F 2024-03-15T18:37:18.558Z	ERROR	fx	fx-logr@v0.1.0/logr.go:48	invoke failed	{"stack": "github.com/chaos-mesh/chaos-mesh/controllers.init\n\t/home/runner/work/chaos-mesh/chaos-mesh/controllers/fx.go:43\nruntime.doInit\n\t/usr/local/go/src/runtime/proc.go:6329\nruntime.doInit\n\t/usr/local/go/src/runtime/proc.go:6306\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:233\n", "function": "github.com/chaos-mesh/chaos-mesh/controllers/common.Bootstrap()", "error": "could not build arguments for function \"github.com/chaos-mesh/chaos-mesh/controllers/common\".Bootstrap (/home/runner/work/chaos-mesh/chaos-mesh/controllers/common/fx.go:57): failed to build manager.Manager: received non-nil error from function \"github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider\".NewManager (/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider/controller.go:103): Get \"https://10.96.0.1:443/api?timeout=32s\": dial tcp 10.96.0.1:443: connect: network is unreachable", "errorVerbose": "could not build arguments for function \"github.com/chaos-mesh/chaos-mesh/controllers/common\".Bootstrap\n\t/home/runner/work/chaos-mesh/chaos-mesh/controllers/common/fx.go:57:\nfailed to build manager.Manager:\nreceived non-nil error from function \"github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider\".NewManager\n\t/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider/controller.go:103:\nGet \"https://10.96.0.1:443/api?timeout=32s\": dial tcp 10.96.0.1:443: connect: network is unreachable"}
+2024-03-15T18:37:18.559321979Z stderr F github.com/chaos-mesh/fx-logr.(*LogrLogger).logError
+2024-03-15T18:37:18.559327686Z stderr F 	/tmp/go/pkg/mod/github.com/chaos-mesh/fx-logr@v0.1.0/logr.go:48
+2024-03-15T18:37:18.559333027Z stderr F github.com/chaos-mesh/fx-logr.(*LogrLogger).LogEvent
+2024-03-15T18:37:18.559338536Z stderr F 	/tmp/go/pkg/mod/github.com/chaos-mesh/fx-logr@v0.1.0/logr.go:226
+2024-03-15T18:37:18.559343859Z stderr F go.uber.org/fx.(*module).executeInvoke
+2024-03-15T18:37:18.559349251Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/module.go:247
+2024-03-15T18:37:18.559354682Z stderr F go.uber.org/fx.(*module).executeInvokes
+2024-03-15T18:37:18.559360018Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/module.go:232
+2024-03-15T18:37:18.559365364Z stderr F go.uber.org/fx.New
+2024-03-15T18:37:18.559373048Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:502
+2024-03-15T18:37:18.559378399Z stderr F main.main
+2024-03-15T18:37:18.559383865Z stderr F 	/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/main.go:80
+2024-03-15T18:37:18.559389279Z stderr F runtime.main
+2024-03-15T18:37:18.559394623Z stderr F 	/usr/local/go/src/runtime/proc.go:250
+2024-03-15T18:37:18.559566402Z stderr F 2024-03-15T18:37:18.559Z	ERROR	fx	fx-logr@v0.1.0/logr.go:48	start failed	{"error": "could not build arguments for function \"github.com/chaos-mesh/chaos-mesh/controllers/common\".Bootstrap (/home/runner/work/chaos-mesh/chaos-mesh/controllers/common/fx.go:57): failed to build manager.Manager: received non-nil error from function \"github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider\".NewManager (/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider/controller.go:103): Get \"https://10.96.0.1:443/api?timeout=32s\": dial tcp 10.96.0.1:443: connect: network is unreachable", "errorVerbose": "could not build arguments for function \"github.com/chaos-mesh/chaos-mesh/controllers/common\".Bootstrap\n\t/home/runner/work/chaos-mesh/chaos-mesh/controllers/common/fx.go:57:\nfailed to build manager.Manager:\nreceived non-nil error from function \"github.com/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider\".NewManager\n\t/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/provider/controller.go:103:\nGet \"https://10.96.0.1:443/api?timeout=32s\": dial tcp 10.96.0.1:443: connect: network is unreachable"}
+2024-03-15T18:37:18.559608402Z stderr F github.com/chaos-mesh/fx-logr.(*LogrLogger).logError
+2024-03-15T18:37:18.559617687Z stderr F 	/tmp/go/pkg/mod/github.com/chaos-mesh/fx-logr@v0.1.0/logr.go:48
+2024-03-15T18:37:18.559624084Z stderr F github.com/chaos-mesh/fx-logr.(*LogrLogger).LogEvent
+2024-03-15T18:37:18.559631111Z stderr F 	/tmp/go/pkg/mod/github.com/chaos-mesh/fx-logr@v0.1.0/logr.go:247
+2024-03-15T18:37:18.559637642Z stderr F go.uber.org/fx.(*App).Start.func1
+2024-03-15T18:37:18.559643893Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:638
+2024-03-15T18:37:18.559650298Z stderr F go.uber.org/fx.(*App).Start
+2024-03-15T18:37:18.559657038Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:643
+2024-03-15T18:37:18.559662934Z stderr F go.uber.org/fx.(*App).run
+2024-03-15T18:37:18.559669449Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:586
+2024-03-15T18:37:18.559675604Z stderr F go.uber.org/fx.(*App).Run
+2024-03-15T18:37:18.559681902Z stderr F 	/tmp/go/pkg/mod/go.uber.org/fx@v1.19.2/app.go:577
+2024-03-15T18:37:18.559688046Z stderr F main.main
+2024-03-15T18:37:18.559698451Z stderr F 	/home/runner/work/chaos-mesh/chaos-mesh/cmd/chaos-controller-manager/main.go:96
+2024-03-15T18:37:18.559704543Z stderr F runtime.main
+2024-03-15T18:37:18.55971097Z stderr F 	/usr/local/go/src/runtime/proc.go:250

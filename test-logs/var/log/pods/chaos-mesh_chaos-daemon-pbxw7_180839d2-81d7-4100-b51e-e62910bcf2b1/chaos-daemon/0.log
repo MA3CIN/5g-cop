@@ -1,0 +1,5 @@
+2024-02-19T09:07:51.526355818Z stdout F Chaos-daemon Version: version.Info{GitVersion:"chart-2.6.3", GitCommit:"b159d1c5a361ca350ca7789c9eb7fc917479db39", BuildDate:"2024-01-23T15:04:55Z", GoVersion:"go1.19.7", Compiler:"gc", Platform:"linux/amd64"}
+2024-02-19T09:07:51.526580888Z stderr F 2024-02-19T09:07:51.526Z	INFO	chaos-daemon.daemon-server	chaos-daemon/main.go:80	grant access to /dev/fuse
+2024-02-19T09:07:51.526675985Z stderr F 2024-02-19T09:07:51.526Z	INFO	chaos-daemon.daemon-server	chaos-daemon/main.go:86	remount /sys with read-write permission
+2024-02-19T09:07:51.527681092Z stderr F 2024-02-19T09:07:51.527Z	INFO	chaos-daemon.daemon-server	runtime/asm_amd64.s:1594	Starting grpc endpoint	{"address": "0.0.0.0:31767", "runtime": "docker"}
+2024-02-19T09:07:51.527704242Z stderr F 2024-02-19T09:07:51.527Z	INFO	chaos-daemon.daemon-server	runtime/asm_amd64.s:1594	Starting http endpoint	{"address": "0.0.0.0:31766"}

@@ -1,0 +1,139 @@
+2023-12-20T20:20:55.806487752Z stderr F {"time": "2023-12-20T20:20:55.805742+00:00", "taskName": null, "msg": "Starting collector", "level": "INFO"}
+2023-12-20T20:20:55.806566556Z stderr F {"time": "2023-12-20T20:20:55.806329+00:00", "taskName": null, "msg": "No folder annotation was provided, defaulting to k8s-sidecar-target-directory", "level": "WARNING"}
+2023-12-20T20:20:55.806811857Z stderr F {"time": "2023-12-20T20:20:55.806608+00:00", "taskName": null, "msg": "Loading incluster config ...", "level": "INFO"}
+2023-12-20T20:20:55.808377764Z stderr F {"time": "2023-12-20T20:20:55.808065+00:00", "taskName": null, "msg": "Config for cluster api at 'https://10.96.0.1:443' loaded...", "level": "INFO"}
+2023-12-20T20:20:55.808410495Z stderr F {"time": "2023-12-20T20:20:55.808254+00:00", "taskName": null, "msg": "Unique filenames will not be enforced.", "level": "INFO"}
+2023-12-20T20:20:55.808574349Z stderr F {"time": "2023-12-20T20:20:55.808415+00:00", "taskName": null, "msg": "5xx response content will not be enabled.", "level": "INFO"}
+2023-12-20T20:21:00.901637725Z stderr F {"time": "2023-12-20T20:21:00.901234+00:00", "taskName": null, "msg": "Writing /etc/grafana/provisioning/datasources/datasource.yaml (ascii)", "level": "INFO"}
+2023-12-20T20:21:00.904680146Z stderr F {"time": "2023-12-20T20:21:00.904371+00:00", "taskName": null, "msg": "Retrying (Retry(total=4, connect=9, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30ad962e40>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/admin/provisioning/datasources/reload", "level": "WARNING"}
+2023-12-20T20:21:03.111787359Z stderr F {"time": "2023-12-20T20:21:03.105518+00:00", "taskName": null, "msg": "Retrying (Retry(total=3, connect=8, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e8fb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/admin/provisioning/datasources/reload", "level": "WARNING"}
+2023-12-20T20:21:07.508423941Z stderr F {"time": "2023-12-20T20:21:07.507819+00:00", "taskName": null, "msg": "Retrying (Retry(total=2, connect=7, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e9250>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/admin/provisioning/datasources/reload", "level": "WARNING"}
+2023-12-20T20:21:16.310506605Z stderr F {"time": "2023-12-20T20:21:16.309913+00:00", "taskName": null, "msg": "Retrying (Retry(total=1, connect=6, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e94f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/admin/provisioning/datasources/reload", "level": "WARNING"}
+2023-12-20T20:21:33.912714341Z stderr F {"time": "2023-12-20T20:21:33.912029+00:00", "taskName": null, "msg": "Retrying (Retry(total=0, connect=5, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e97f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/admin/provisioning/datasources/reload", "level": "WARNING"}
+2023-12-20T20:21:33.914791727Z stderr F {"time": "2023-12-20T20:21:33.914382+00:00", "taskName": null, "msg": "Received unknown exception: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/admin/provisioning/datasources/reload (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e9a00>: Failed to establish a new connection: [Errno 111] Connection refused'))\n", "level": "ERROR"}
+2023-12-20T20:21:33.921649542Z stderr F Traceback (most recent call last):
+2023-12-20T20:21:33.921805654Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 203, in _new_conn
+2023-12-20T20:21:33.921818642Z stderr F     sock = connection.create_connection(
+2023-12-20T20:21:33.921852785Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.921861215Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+2023-12-20T20:21:33.92186845Z stderr F     raise err
+2023-12-20T20:21:33.921886127Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+2023-12-20T20:21:33.921894086Z stderr F     sock.connect(sa)
+2023-12-20T20:21:33.921901027Z stderr F ConnectionRefusedError: [Errno 111] Connection refused
+2023-12-20T20:21:33.922008168Z stderr F 
+2023-12-20T20:21:33.922041892Z stderr F The above exception was the direct cause of the following exception:
+2023-12-20T20:21:33.922049307Z stderr F 
+2023-12-20T20:21:33.922056189Z stderr F Traceback (most recent call last):
+2023-12-20T20:21:33.922273195Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+2023-12-20T20:21:33.922285538Z stderr F     response = self._make_request(
+2023-12-20T20:21:33.922291829Z stderr F                ^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.922299157Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+2023-12-20T20:21:33.922305915Z stderr F     conn.request(
+2023-12-20T20:21:33.922311867Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 395, in request
+2023-12-20T20:21:33.922317963Z stderr F     self.endheaders()
+2023-12-20T20:21:33.922324266Z stderr F   File "/usr/local/lib/python3.12/http/client.py", line 1314, in endheaders
+2023-12-20T20:21:33.922330454Z stderr F     self._send_output(message_body, encode_chunked=encode_chunked)
+2023-12-20T20:21:33.922336476Z stderr F   File "/usr/local/lib/python3.12/http/client.py", line 1074, in _send_output
+2023-12-20T20:21:33.92234277Z stderr F     self.send(msg)
+2023-12-20T20:21:33.922349094Z stderr F   File "/usr/local/lib/python3.12/http/client.py", line 1018, in send
+2023-12-20T20:21:33.922354932Z stderr F     self.connect()
+2023-12-20T20:21:33.922360754Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 243, in connect
+2023-12-20T20:21:33.922366915Z stderr F     self.sock = self._new_conn()
+2023-12-20T20:21:33.922372854Z stderr F                 ^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.922378639Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connection.py", line 218, in _new_conn
+2023-12-20T20:21:33.922384448Z stderr F     raise NewConnectionError(
+2023-12-20T20:21:33.922391164Z stderr F urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f30aa9e9a00>: Failed to establish a new connection: [Errno 111] Connection refused
+2023-12-20T20:21:33.922412074Z stderr F 
+2023-12-20T20:21:33.92241878Z stderr F The above exception was the direct cause of the following exception:
+2023-12-20T20:21:33.922424433Z stderr F 
+2023-12-20T20:21:33.922430234Z stderr F Traceback (most recent call last):
+2023-12-20T20:21:33.922466956Z stderr F   File "/app/.venv/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+2023-12-20T20:21:33.922478978Z stderr F     resp = conn.urlopen(
+2023-12-20T20:21:33.922484197Z stderr F            ^^^^^^^^^^^^^
+2023-12-20T20:21:33.922488789Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+2023-12-20T20:21:33.922493846Z stderr F     return self.urlopen(
+2023-12-20T20:21:33.922499037Z stderr F            ^^^^^^^^^^^^^
+2023-12-20T20:21:33.922503582Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+2023-12-20T20:21:33.922508808Z stderr F     return self.urlopen(
+2023-12-20T20:21:33.922513079Z stderr F            ^^^^^^^^^^^^^
+2023-12-20T20:21:33.922517598Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 874, in urlopen
+2023-12-20T20:21:33.922522388Z stderr F     return self.urlopen(
+2023-12-20T20:21:33.922543138Z stderr F            ^^^^^^^^^^^^^
+2023-12-20T20:21:33.922559757Z stderr F   [Previous line repeated 2 more times]
+2023-12-20T20:21:33.922565404Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+2023-12-20T20:21:33.922570505Z stderr F     retries = retries.increment(
+2023-12-20T20:21:33.922575721Z stderr F               ^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.922580116Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+2023-12-20T20:21:33.922584868Z stderr F     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+2023-12-20T20:21:33.922589385Z stderr F     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.922600985Z stderr F urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/admin/provisioning/datasources/reload (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e9a00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2023-12-20T20:21:33.922605705Z stderr F 
+2023-12-20T20:21:33.922611166Z stderr F During handling of the above exception, another exception occurred:
+2023-12-20T20:21:33.922615415Z stderr F 
+2023-12-20T20:21:33.922620016Z stderr F Traceback (most recent call last):
+2023-12-20T20:21:33.92308556Z stderr F   File "/app/resources.py", line 374, in _watch_resource_loop
+2023-12-20T20:21:33.923109175Z stderr F     _watch_resource_iterator(*args)
+2023-12-20T20:21:33.92311662Z stderr F   File "/app/resources.py", line 362, in _watch_resource_iterator
+2023-12-20T20:21:33.923122806Z stderr F     request(request_url, request_method, enable_5xx, request_payload)
+2023-12-20T20:21:33.923129007Z stderr F   File "/app/helpers.py", line 142, in request
+2023-12-20T20:21:33.923135583Z stderr F     res = r.post("%s" % url, auth=auth, json=payload, timeout=REQ_TIMEOUT, verify=REQ_TLS_VERIFY)
+2023-12-20T20:21:33.923141951Z stderr F           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.923148826Z stderr F   File "/app/.venv/lib/python3.12/site-packages/requests/sessions.py", line 637, in post
+2023-12-20T20:21:33.923155169Z stderr F     return self.request("POST", url, data=data, json=json, **kwargs)
+2023-12-20T20:21:33.923161099Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.92316701Z stderr F   File "/app/.venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+2023-12-20T20:21:33.923172833Z stderr F     resp = self.send(prep, **send_kwargs)
+2023-12-20T20:21:33.923178818Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.923184572Z stderr F   File "/app/.venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+2023-12-20T20:21:33.923190505Z stderr F     r = adapter.send(request, **kwargs)
+2023-12-20T20:21:33.92319642Z stderr F         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2023-12-20T20:21:33.923202426Z stderr F   File "/app/.venv/lib/python3.12/site-packages/requests/adapters.py", line 519, in send
+2023-12-20T20:21:33.923208325Z stderr F     raise ConnectionError(e, request=request)
+2023-12-20T20:21:33.923215179Z stderr F requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=3000): Max retries exceeded with url: /api/admin/provisioning/datasources/reload (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f30aa9e9a00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2024-03-15T18:36:52.839266324Z stderr F {"time": "2024-03-15T18:36:52.838148+00:00", "taskName": null, "msg": "Retrying (Retry(total=4, connect=9, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30a8430ad0>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/secrets?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:36:52.839447107Z stderr F {"time": "2024-03-15T18:36:52.838244+00:00", "taskName": null, "msg": "Retrying (Retry(total=4, connect=9, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30aa938200>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/configmaps?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:37:02.206726104Z stderr F {"time": "2024-03-15T18:37:02.206059+00:00", "taskName": null, "msg": "Retrying (Retry(total=3, connect=8, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30ad9b3560>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/configmaps?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:37:09.654957327Z stderr F {"time": "2024-03-15T18:37:09.654198+00:00", "taskName": null, "msg": "Retrying (Retry(total=2, connect=7, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30ac0d5850>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/configmaps?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:37:26.526873147Z stderr F {"time": "2024-03-15T18:37:26.526196+00:00", "taskName": null, "msg": "Retrying (Retry(total=3, connect=8, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30a8483e60>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/secrets?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:37:33.974736378Z stderr F {"time": "2024-03-15T18:37:33.974138+00:00", "taskName": null, "msg": "Retrying (Retry(total=2, connect=7, read=5, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f30a84e4650>: Failed to establish a new connection: [Errno 101] Network unreachable')': /api/v1/namespaces/default/secrets?labelSelector=grafana_datasource%3D1&timeoutSeconds=60&watch=True", "level": "WARNING"}
+2024-03-15T18:38:15.702613026Z stderr F {"time": "2024-03-15T18:38:15.702058+00:00", "taskName": null, "msg": "Received unknown exception: HTTPSConnectionPool(host='10.96.0.1', port=443): Read timed out.\n", "level": "ERROR"}
+2024-03-15T18:38:15.708012397Z stderr F Traceback (most recent call last):
+2024-03-15T18:38:15.708937641Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 710, in _error_catcher
+2024-03-15T18:38:15.708960911Z stderr F     yield
+2024-03-15T18:38:15.708969725Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1073, in read_chunked
+2024-03-15T18:38:15.708978281Z stderr F     self._update_chunk_length()
+2024-03-15T18:38:15.70898619Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1001, in _update_chunk_length
+2024-03-15T18:38:15.708995755Z stderr F     line = self._fp.fp.readline()  # type: ignore[union-attr]
+2024-03-15T18:38:15.70900404Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^
+2024-03-15T18:38:15.709012861Z stderr F   File "/usr/local/lib/python3.12/socket.py", line 707, in readinto
+2024-03-15T18:38:15.709020546Z stderr F     return self._sock.recv_into(b)
+2024-03-15T18:38:15.709028008Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-15T18:38:15.709035571Z stderr F   File "/usr/local/lib/python3.12/ssl.py", line 1249, in recv_into
+2024-03-15T18:38:15.709043099Z stderr F     return self.read(nbytes, buffer)
+2024-03-15T18:38:15.709050554Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-15T18:38:15.709057966Z stderr F   File "/usr/local/lib/python3.12/ssl.py", line 1105, in read
+2024-03-15T18:38:15.70908482Z stderr F     return self._sslobj.read(len, buffer)
+2024-03-15T18:38:15.709091928Z stderr F            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-15T18:38:15.709115719Z stderr F TimeoutError: The read operation timed out
+2024-03-15T18:38:15.709122523Z stderr F 
+2024-03-15T18:38:15.709129394Z stderr F The above exception was the direct cause of the following exception:
+2024-03-15T18:38:15.709135341Z stderr F 
+2024-03-15T18:38:15.709141735Z stderr F Traceback (most recent call last):
+2024-03-15T18:38:15.709594338Z stderr F   File "/app/resources.py", line 374, in _watch_resource_loop
+2024-03-15T18:38:15.709617629Z stderr F     _watch_resource_iterator(*args)
+2024-03-15T18:38:15.70962449Z stderr F   File "/app/resources.py", line 326, in _watch_resource_iterator
+2024-03-15T18:38:15.709630917Z stderr F     for event in stream:
+2024-03-15T18:38:15.709637084Z stderr F   File "/app/.venv/lib/python3.12/site-packages/kubernetes/watch/watch.py", line 165, in stream
+2024-03-15T18:38:15.709643023Z stderr F     for line in iter_resp_lines(resp):
+2024-03-15T18:38:15.709649393Z stderr F   File "/app/.venv/lib/python3.12/site-packages/kubernetes/watch/watch.py", line 56, in iter_resp_lines
+2024-03-15T18:38:15.709655142Z stderr F     for seg in resp.stream(amt=None, decode_content=False):
+2024-03-15T18:38:15.709661112Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 933, in stream
+2024-03-15T18:38:15.709667176Z stderr F     yield from self.read_chunked(amt, decode_content=decode_content)
+2024-03-15T18:38:15.709672615Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1061, in read_chunked
+2024-03-15T18:38:15.709678655Z stderr F     with self._error_catcher():
+2024-03-15T18:38:15.70969219Z stderr F   File "/usr/local/lib/python3.12/contextlib.py", line 155, in __exit__
+2024-03-15T18:38:15.709698024Z stderr F     self.gen.throw(value)
+2024-03-15T18:38:15.709703521Z stderr F   File "/app/.venv/lib/python3.12/site-packages/urllib3/response.py", line 715, in _error_catcher
+2024-03-15T18:38:15.709709245Z stderr F     raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+2024-03-15T18:38:15.7097147Z stderr F     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2024-03-15T18:38:15.709720477Z stderr F urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='10.96.0.1', port=443): Read timed out.

@@ -1,0 +1,25 @@
+2023-12-14T20:23:01.125703927Z stderr F I1214 20:23:01.125488       1 main.go:212] CLI flags config: {etcdEndpoints:http://127.0.0.1:4001,http://127.0.0.1:2379 etcdPrefix:/coreos.com/network etcdKeyfile: etcdCertfile: etcdCAFile: etcdUsername: etcdPassword: version:false kubeSubnetMgr:true kubeApiUrl: kubeAnnotationPrefix:flannel.alpha.coreos.com kubeConfigFile: iface:[] ifaceRegex:[] ipMasq:true ifaceCanReach: subnetFile:/run/flannel/subnet.env publicIP: publicIPv6: subnetLeaseRenewMargin:60 healthzIP:0.0.0.0 healthzPort:0 iptablesResyncSeconds:5 iptablesForwardRules:true netConfPath:/etc/kube-flannel/net-conf.json setNodeNetworkUnavailable:true useMultiClusterCidr:false}
+2023-12-14T20:23:01.125763715Z stderr F W1214 20:23:01.125593       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-12-14T20:23:01.145689973Z stderr F I1214 20:23:01.145549       1 kube.go:145] Waiting 10m0s for node controller to sync
+2023-12-14T20:23:01.145978922Z stderr F I1214 20:23:01.145678       1 kube.go:490] Starting kube subnet manager
+2023-12-14T20:23:02.146497158Z stderr F I1214 20:23:02.146280       1 kube.go:152] Node controller sync successful
+2023-12-14T20:23:02.146535937Z stderr F I1214 20:23:02.146334       1 main.go:232] Created subnet manager: Kubernetes Subnet Manager - s141
+2023-12-14T20:23:02.146544056Z stderr F I1214 20:23:02.146346       1 main.go:235] Installing signal handlers
+2023-12-14T20:23:02.146618021Z stderr F I1214 20:23:02.146538       1 main.go:543] Found network config - Backend type: vxlan
+2023-12-14T20:23:02.14668502Z stderr F I1214 20:23:02.146614       1 match.go:206] Determining IP address of default interface
+2023-12-14T20:23:02.148311759Z stderr F I1214 20:23:02.148104       1 match.go:259] Using interface with name eno1 and address 10.140.0.139
+2023-12-14T20:23:02.148336264Z stderr F I1214 20:23:02.148158       1 match.go:281] Defaulting external address to interface address (10.140.0.139)
+2023-12-14T20:23:02.148357475Z stderr F I1214 20:23:02.148310       1 vxlan.go:141] VXLAN config: VNI=1 Port=0 GBP=false Learning=false DirectRouting=false
+2023-12-14T20:23:02.177523085Z stderr F I1214 20:23:02.177377       1 kube.go:511] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [10.244.0.0/24]
+2023-12-14T20:23:02.178516836Z stderr F W1214 20:23:02.178410       1 main.go:596] no subnet found for key: FLANNEL_SUBNET in file: /run/flannel/subnet.env
+2023-12-14T20:23:02.17854039Z stderr F I1214 20:23:02.178435       1 main.go:482] Current network or subnet (10.244.0.0/16, 10.244.0.0/24) is not equal to previous one (0.0.0.0/0, 0.0.0.0/0), trying to recycle old iptables rules
+2023-12-14T20:23:02.216673897Z stderr F I1214 20:23:02.216492       1 main.go:357] Setting up masking rules
+2023-12-14T20:23:02.26031406Z stderr F I1214 20:23:02.260117       1 main.go:408] Changing default FORWARD chain policy to ACCEPT
+2023-12-14T20:23:02.262219679Z stderr F I1214 20:23:02.262069       1 iptables.go:290] generated 7 rules
+2023-12-14T20:23:02.319070226Z stderr F I1214 20:23:02.318894       1 iptables.go:290] generated 3 rules
+2023-12-14T20:23:02.319094041Z stderr F I1214 20:23:02.318971       1 main.go:436] Wrote subnet file to /run/flannel/subnet.env
+2023-12-14T20:23:02.319101504Z stderr F I1214 20:23:02.319006       1 main.go:440] Running backend.
+2023-12-14T20:23:02.31921986Z stderr F I1214 20:23:02.319147       1 vxlan_network.go:65] watching for new subnet leases
+2023-12-14T20:23:02.346874869Z stderr F I1214 20:23:02.346703       1 main.go:461] Waiting for all goroutines to exit
+2023-12-14T20:23:02.359056941Z stderr F I1214 20:23:02.358940       1 iptables.go:283] bootstrap done
+2023-12-14T20:23:02.403086071Z stderr F I1214 20:23:02.402919       1 iptables.go:283] bootstrap done

@@ -1,0 +1,37 @@
+2023-12-15T00:23:57.159002888Z stderr F I1215 00:23:57.158770       1 main.go:212] CLI flags config: {etcdEndpoints:http://127.0.0.1:4001,http://127.0.0.1:2379 etcdPrefix:/coreos.com/network etcdKeyfile: etcdCertfile: etcdCAFile: etcdUsername: etcdPassword: version:false kubeSubnetMgr:true kubeApiUrl: kubeAnnotationPrefix:flannel.alpha.coreos.com kubeConfigFile: iface:[] ifaceRegex:[] ipMasq:true ifaceCanReach: subnetFile:/run/flannel/subnet.env publicIP: publicIPv6: subnetLeaseRenewMargin:60 healthzIP:0.0.0.0 healthzPort:0 iptablesResyncSeconds:5 iptablesForwardRules:true netConfPath:/etc/kube-flannel/net-conf.json setNodeNetworkUnavailable:true useMultiClusterCidr:false}
+2023-12-15T00:23:57.159049377Z stderr F W1215 00:23:57.158850       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-12-15T00:23:57.229228645Z stderr F I1215 00:23:57.229013       1 kube.go:145] Waiting 10m0s for node controller to sync
+2023-12-15T00:23:57.229544569Z stderr F I1215 00:23:57.229446       1 kube.go:490] Starting kube subnet manager
+2023-12-15T00:23:57.23397669Z stderr F I1215 00:23:57.233867       1 kube.go:511] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [10.244.0.0/24]
+2023-12-15T00:23:58.229643993Z stderr F I1215 00:23:58.229493       1 kube.go:152] Node controller sync successful
+2023-12-15T00:23:58.238512112Z stderr F I1215 00:23:58.229540       1 main.go:232] Created subnet manager: Kubernetes Subnet Manager - s141
+2023-12-15T00:23:58.238525019Z stderr F I1215 00:23:58.229553       1 main.go:235] Installing signal handlers
+2023-12-15T00:23:58.238555523Z stderr F I1215 00:23:58.229723       1 main.go:543] Found network config - Backend type: vxlan
+2023-12-15T00:23:58.238565628Z stderr F I1215 00:23:58.229764       1 match.go:206] Determining IP address of default interface
+2023-12-15T00:23:58.238570405Z stderr F I1215 00:23:58.230720       1 match.go:259] Using interface with name eno1 and address 10.140.0.139
+2023-12-15T00:23:58.238575017Z stderr F I1215 00:23:58.230746       1 match.go:281] Defaulting external address to interface address (10.140.0.139)
+2023-12-15T00:23:58.238580261Z stderr F I1215 00:23:58.230825       1 vxlan.go:141] VXLAN config: VNI=1 Port=0 GBP=false Learning=false DirectRouting=false
+2023-12-15T00:23:58.684638199Z stderr F I1215 00:23:58.684457       1 kube.go:511] Creating the node lease for IPv4. This is the n.Spec.PodCIDRs: [10.244.0.0/24]
+2023-12-15T00:23:58.684876924Z stderr F W1215 00:23:58.684793       1 main.go:596] no subnet found for key: FLANNEL_SUBNET in file: /run/flannel/subnet.env
+2023-12-15T00:23:58.684937326Z stderr F I1215 00:23:58.684817       1 main.go:482] Current network or subnet (10.244.0.0/16, 10.244.0.0/24) is not equal to previous one (0.0.0.0/0, 0.0.0.0/0), trying to recycle old iptables rules
+2023-12-15T00:23:58.883729013Z stderr F I1215 00:23:58.883578       1 main.go:357] Setting up masking rules
+2023-12-15T00:23:58.926032131Z stderr F I1215 00:23:58.925908       1 main.go:408] Changing default FORWARD chain policy to ACCEPT
+2023-12-15T00:23:58.927850515Z stderr F I1215 00:23:58.927770       1 iptables.go:290] generated 7 rules
+2023-12-15T00:23:58.97001203Z stderr F I1215 00:23:58.969875       1 iptables.go:290] generated 3 rules
+2023-12-15T00:23:58.97003754Z stderr F I1215 00:23:58.969945       1 main.go:436] Wrote subnet file to /run/flannel/subnet.env
+2023-12-15T00:23:58.970059325Z stderr F I1215 00:23:58.969982       1 main.go:440] Running backend.
+2023-12-15T00:23:58.970247224Z stderr F I1215 00:23:58.970155       1 vxlan_network.go:65] watching for new subnet leases
+2023-12-15T00:23:59.012879202Z stderr F I1215 00:23:59.012757       1 main.go:461] Waiting for all goroutines to exit
+2023-12-15T00:23:59.02998091Z stderr F I1215 00:23:59.029828       1 iptables.go:283] bootstrap done
+2023-12-15T00:23:59.081916238Z stderr F I1215 00:23:59.081785       1 iptables.go:283] bootstrap done
+2024-03-15T18:36:45.787678672Z stderr F W0315 18:36:45.787425       1 reflector.go:347] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: watch of *v1.Node ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+2024-03-15T18:36:47.335893946Z stderr F W0315 18:36:47.335607       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:36:47.335935233Z stderr F E0315 18:36:47.335705       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: Failed to watch *v1.Node: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:36:50.193425007Z stderr F W0315 18:36:50.193207       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:36:50.193463941Z stderr F E0315 18:36:50.193297       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: Failed to watch *v1.Node: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:36:55.478246125Z stderr F W0315 18:36:55.477987       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:36:55.47828536Z stderr F E0315 18:36:55.478145       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: Failed to watch *v1.Node: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:37:04.218237051Z stderr F W0315 18:37:04.217984       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:37:04.218293416Z stderr F E0315 18:37:04.218057       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: Failed to watch *v1.Node: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:37:28.803410054Z stderr F W0315 18:37:28.803183       1 reflector.go:424] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
+2024-03-15T18:37:28.803455502Z stderr F E0315 18:37:28.803282       1 reflector.go:140] github.com/flannel-io/flannel/pkg/subnet/kube/kube.go:491: Failed to watch *v1.Node: failed to list *v1.Node: Get "https://10.96.0.1:443/api/v1/nodes?resourceVersion=12829609": dial tcp 10.96.0.1:443: connect: network is unreachable
