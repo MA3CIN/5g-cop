@@ -1,0 +1,3 @@
+  (rate(response_latency_ms_sum{app_kubernetes_io_instance="open5gs", app_kubernetes_io_name="amf"}[5m])
+/
+  rate(response_latency_ms_count{app_kubernetes_io_instance="open5gs", app_kubernetes_io_name="amf"}[5m]))
