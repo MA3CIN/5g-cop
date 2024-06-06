@@ -1,5 +1,6 @@
 import logs
 import state 
+import service_mesh
 
 # structure this around 5 modules: state, logs, metrics, traces...? + something from Service Mesh, not sure what (comm with their API)
 
