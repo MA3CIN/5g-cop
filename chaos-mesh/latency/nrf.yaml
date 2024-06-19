@@ -11,6 +11,6 @@ spec:
     labelSelectors:
       "app.kubernetes.io/name": "nrf"
   delay:
-    latency: "50ms"
+    latency: "500ms"
     correlation: "100"
     jitter: "0ms"
