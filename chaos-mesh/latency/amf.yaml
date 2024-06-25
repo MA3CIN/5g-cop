@@ -5,7 +5,6 @@ metadata:
 spec:
   action: delay
   mode: one
-  direction: both
   selector:
     namespaces:
       - open5gs
