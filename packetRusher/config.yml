@@ -6,16 +6,16 @@ gnodeb:
     ip: "10.141.6.5"
     port: 2152
   plmnlist:
-    mcc: "001"
-    mnc: "01"
+    mcc: "999"
+    mnc: "70"
     tac: "000001"
     gnbid: "000008"
   slicesupportlist:
     sst: "01"
-    sd: "010203" # optional, can be removed if not used
+    sd: "111111" # optional, can be removed if not used
 
 ue:
-  msin: "0000001000"
+  msin: "0000000001"
   key: "465B5CE8B199B49FAA5F0A2EE238A6BC"
   opc: "E8ED289DEBA952E4283B54E88E6183CA"
   amf: "8000"
@@ -23,21 +23,11 @@ ue:
   dnn: "internet"
   routingindicator: "0000"
   hplmn:
-    mcc: "001"
-    mnc: "01"
+    mcc: "999"
+    mnc: "70"
   snssai:
     sst: 01
-    sd: "010203" # optional, can be removed if not used
-  integrity:
-    nia0: false
-    nia1: false
-    nia2: true
-    nia3: false
-  ciphering:
-    nea0: true
-    nea1: false
-    nea2: true
-    nea3: false
+    sd: "111111" # optional, can be removed if not used
 amfif:
   ip: "10.140.0.139"
   port: 30009
