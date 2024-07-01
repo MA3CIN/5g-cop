@@ -1,0 +1,15 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: delay
+spec:
+  action: loss
+  mode: one
+  selector:
+    namespaces:
+      - open5gs
+    labelSelectors:
+      "app.kubernetes.io/name": "amf"
+  delay:
+    loss: "10"
+    correlation: "100"
